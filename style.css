@@ -1,0 +1,164 @@
+/* Start Variables  */
+:root {}
+
+
+/* End Variables */
+
+/* Standerd Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: ; */
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+
+/* Start Header Section */
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 50px;
+}
+
+.header .links .icon {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 35px;
+}
+
+.header .links .icon span {
+    background-color: #222;
+    height: 3px;
+    margin-bottom: 5px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 70%;
+    transition: 0.3s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+
+/* Links */
+.header .links {
+    position: relative;
+}
+
+.header .links ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul {
+    list-style: none;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: calc(100%+15px);
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+/* :not(:last-child) */
+.header .links ul li a {
+    border-bottom: 1px solid #ddd;
+}
+
+/* End Header Section */
+
+
+
+/* Start Home Section */
+
+.home {
+    height: calc(100vh - 40px);
+    position: relative;
+
+}
+
+.home .container {
+    display: flex;
+    align-items: center;
+}
+
+
+.home .container img {
+    width: 800px;
+    margin-right: -120px;
+}
+
+.home .text {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.text-1 {
+    margin-bottom: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+h1 .heading-1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+
+
+/* End Home Section */
