@@ -64,10 +64,18 @@
             <div class="text">
             </div>
             <div class="btn">
-                <a href="App/RAYA.apk" download='App' class="download-btn">Download App
-                    <i class="fa fa-download"></i>
-                </a>
+                <a href="#" onclick="downloadApp()" class="download-btn">Download App</a>
             </div>
+
+            <script>
+                function downloadApp() {
+                    var downloadLink = document.createElement('a');
+                    downloadLink.href = 'https://drive.google.com/uc?export=download&id=1M_7obx-GGuys4EtJzeciORx1h2lR7F3a';
+                    downloadLink.setAttribute('download', 'App');
+                    downloadLink.click();
+                }
+            </script>
+
         </div>
     </div>
     <!-- End Download Section -->
