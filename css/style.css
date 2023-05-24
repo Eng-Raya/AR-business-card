@@ -105,6 +105,13 @@ ul{
   transition-delay: 0.5s;
 }
 
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* End Global Rules */
 
 /* ====================================================================== */
@@ -447,5 +454,106 @@ p {
   .w-layout-grid {
     display: block;
   }
+  .w-layout-grid img
+  {
+    display: block;
+    margin: 20px auto;
+  }
 }
 /* End Downlaod Section */
+
+
+/* Start Featuers Section */
+
+.featuers
+{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.featuers .container
+{
+  max-width: 800px;
+  margin-right: auto;
+  margin-bottom: 65px;
+  margin-left: auto;
+  text-align: center;
+}
+.featuer
+{
+  display: flex;
+  width: 100%
+}
+
+.feature-grid {
+  width: 100%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 40px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  min-width: 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #ecebea;
+  border-radius: 6px;
+}
+
+.card-shadow  {
+background-color: #fff;
+box-shadow: 6px 6px 16px 0 rgba(0,0,0,.08);
+}
+
+.heading-5 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.card img{
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.card-image {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+@media(max-width: 991px)
+
+{
+  .textcard
+  {
+    display: none;
+  }
+  .feature-grid
+  {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* End Featuers Section */
