@@ -47,10 +47,10 @@
             </div>
             <ul class="links">
               <li>
-                <a href="#testimonials"><i class="far fa-comments fa-fw"></i> Testimonials</a>
+                <a href="http://localhost/phplogin/index.php"><i class="fa-solid fa-lock"></i> Admin Login</a>
               </li>
               <li>
-                <a href="#team"><i class="far fa-user fa-fw"></i> Team Members</a>
+                <a href="#team"><i class="fa-solid fa-people-group"></i> Team Members</a>
               </li>
               <li>
                 <a href="#services"><i class="far fa-building fa-fw"></i> Services</a>
@@ -277,7 +277,7 @@
       <button id="popup-button" class="button-3">Button</button>
       <div id="overlay"></div>
       <div id="form-box">
-        <form id="my-form" style="display: none;">
+        <form id="my-form" action="submit_form.php" method="post" style="display: none;">
           <div id="form-buttons">
             <button id="student-button">Student </button>
             <button id="freelancer-button">Freelancer </button>
@@ -286,22 +286,110 @@
           </div>
           <div id="form-content">
             <!-- Initial form content -->
+            <div class="form-group" id="student-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Name">
+              <div class="upload">
+                <button type="button" class="btn-warning">
+                  <i class="fa fa-upload"></i> Upload Photo
+                  <input type="file">
+                </button>
+              </div>
+              <label for="linkedin-profile">LinkedIn Profile:</label>
+              <input type="text" id="linkedin-profile" name="linkedin-profile" required placeholder="LinkedIn URL ">
+              <label for="github">GitHub:</label>
+              <input type="text" id="github" name="github" required placeholder="GitHub URL ">
+              <label for="resume-url">Resume URL:</label>
+              <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
+              <label for="gmail">Gmail:</label>
+              <input type="email" id="gmail" name="gmail" required placeholder="Email">
+              <button type="submit">Submit</button>
+            </div>
+            <div id="freelancer-form" class="form-group" style="display: none;">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Name">
+              <div class="upload">
+                <button type="button" class="btn-warning">
+                  <i class="fa fa-upload"></i> Upload Photo
+                  <input type="file">
+                </button>
+              </div>
+              <label for="linkedin-profile">LinkedIn Profile:</label>
+              <input type="text" id="linkedin-profile" name="linkedin-profile" required placeholder="LinkedIn URL">
+              <label for="github">GitHub:</label>
+              <input type="text" id="github" name="github" required placeholder="GitHub URL">
+              <label for="resume-url">Resume URL:</label>
+              <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
+              <label for="website-url">Website URL:</label>
+              <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
+              <label for="gmail">Gmail:</label>
+              <input type="email" id="gmail" name="gmail" required placeholder="Email">
+              <button type="submit">Submit</button>
+            </div>
             <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            <div id="company-form" class="form-group" style="display: none;">
+              <label for=" location">Location:</label>
+              <input type="text" id="location" name="location" required placeholder="Location">
+              <label for="facebook">Facebook:</label>
+              <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
+              <label for="website-url">Website URL:</label>
+              <input type="text" id="website-url" name="website-url" required placeholder="Website URL ">
+              <label for="gmail">Gmail:</label>
+              <input type="email" id="gmail" name="gmail" required placeholder="Email">
+              <button type="submit">Submit</button>
+            </div>
+            <div id="special-form" class="form-group" style="display: none;">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Name">
+              <label for="location">Location:</label>
+              <input type="text" id="location" name="location" required placeholder="Location">
+              <label for="facebook">Facebook:</label>
+              <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
+              <label for="website-url">Website URL:</label>
+              <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
+              <label for="video-url">Video URL:</label>
+              <input type="text" id="video-url" name="video-url" required placeholder="Video URL">
+              <label for="gmail">Gmail:</label>
+              <input type="email" id="gmail" name="gmail" required placeholder="Email">
+              <button type="submit">Submit</button>
             </div>
           </div>
         </form>
       </div>
-
       <!-- End Button form -->
     </div>
-
-
-
   </div>
 
   <!-- Secript JS -->
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#student-button").click(function () {
+        $(".form-group").hide();
+        $("#student-form").show();
+      });
+
+      $("#freelancer-button").click(function () {
+        $(".form-group").hide();
+        $("#freelancer-form").show();
+      });
+
+      $("#company-button").click(function () {
+        $(".form-group").hide();
+        $("#company-form").show();
+      });
+
+      $("#special-button").click(function () {
+        $(".form-group").hide();
+        $("#special-form").show();
+      });
+    });
+  </script>
 </body>
 
 </html>
