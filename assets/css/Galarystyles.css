@@ -200,6 +200,10 @@ img {
   scroll-snap-type: initial;
 }
 
+div.gallery-title h2 {
+  margin: 20px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -216,6 +220,7 @@ img {
     align-content: center;
     justify-content: center;
     padding-left: 0;
+    flex-wrap: wrap;
   }
 
   .gallery__card {
