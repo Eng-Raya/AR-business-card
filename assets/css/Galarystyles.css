@@ -237,4 +237,13 @@ div.gallery-title h2 {
   .gallery-thumbs {
     width: 280px;
   }
+
+  .gallery__img {
+    inset: 0;
+    width: 271px;
+    right: 320px;
+    top: 39px;
+    margin: auto;
+    transition: transform .3s;
+  }
 }
