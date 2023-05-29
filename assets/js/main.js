@@ -73,28 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  myForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission for demonstration purposes
-    // Perform form submission or other desired actions here
-  });
-  myForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Perform necessary operations here before redirecting to the payment page
-
-    // Display a confirmation window
-    var confirmation = confirm('Are you sure you want to proceed to the payment page?');
-    if (confirmation) {
-      // If the user agrees, redirect them to the payment page
-      window.location.href = 'payment-page.html';
-    } else {
-      // If the user declines, display an alert message
-      var alertMessage = document.createElement('div');
-      alertMessage.textContent = 'Payment process canceled';
-      alertMessage.classList.add('alert-message', 'alert-info');
-      document.body.appendChild(alertMessage);
-    }
-  });
+  
 
 });
 

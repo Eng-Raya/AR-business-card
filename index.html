@@ -277,7 +277,7 @@
       <button id="popup-button" class="button-3">Button</button>
       <div id="overlay"></div>
       <div id="form-box">
-        <form id="my-form" action="submit_form.php" method="post" style="display: none;">
+        <form id="my-form" style="display: none;">
           <div id="form-buttons">
             <button id="student-button">Student </button>
             <button id="freelancer-button">Freelancer </button>
@@ -286,108 +286,123 @@
           </div>
           <div id="form-content">
             <!-- Initial form content -->
-            <div class="form-group" id="student-form" style="display:none;">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required placeholder="Name">
-              <div class="upload">
-                <button type="button" class="btn-warning">
-                  <i class="fa fa-upload"></i> Upload Photo
-                  <input type="file">
-                </button>
+
+
+            <form id="my-form" action="./Backend/freelancer.php" method="post" enctype="multipart/form-data">
+              <div id="freelancer-form" class="form-group" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Name">
+                <div class="upload">
+                  <button type="button" class="btn-warning" for="name" id="image" name="image">
+                    <i class="fa fa-upload"></i> Upload Photo
+                    <input type="file" id="image" name="image" for="name">
+                  </button>
+                </div>
+                <label for="linkedin-profile">LinkedIn Profile:</label>
+                <input type="text" id="linkedin-profile" name="linkedin-profile" required placeholder="LinkedIn URL">
+                <label for="github">GitHub:</label>
+                <input type="text" id="github" name="github" required placeholder="GitHub URL">
+                <label for="resume-url">Resume URL:</label>
+                <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
+                <label for="website-url">Website URL:</label>
+                <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Email">
+
+                <button type="submit">Submit</button>
               </div>
-              <label for="linkedin-profile">LinkedIn Profile:</label>
-              <input type="text" id="linkedin-profile" name="linkedin-profile" required placeholder="LinkedIn URL ">
-              <label for="github">GitHub:</label>
-              <input type="text" id="github" name="github" required placeholder="GitHub URL ">
-              <label for="resume-url">Resume URL:</label>
-              <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
-              <label for="gmail">Gmail:</label>
-              <input type="email" id="gmail" name="gmail" required placeholder="Email">
-              <button type="submit">Submit</button>
-            </div>
-            <div id="freelancer-form" class="form-group" style="display: none;">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required placeholder="Name">
-              <div class="upload">
-                <button type="button" class="btn-warning">
-                  <i class="fa fa-upload"></i> Upload Photo
-                  <input type="file">
-                </button>
+            </form>
+            <!-- Special Card Form -->
+            <form id="my-form" action="./Backend/special.php" method="post">
+              <div id="special-form" class="form-group" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Name">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required placeholder="Location">
+                <label for="facebook">Facebook:</label>
+                <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
+                <label for="website-url">Website URL:</label>
+                <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
+                <label for="video-url">Video URL:</label>
+                <input type="text" id="video-url" name="video-url" required placeholder="Video URL">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Email">
+                <button type="submit">Submit</button>
               </div>
-              <label for="linkedin-profile">LinkedIn Profile:</label>
-              <input type="text" id="linkedin-profile" name="linkedin-profile" required placeholder="LinkedIn URL">
-              <label for="github">GitHub:</label>
-              <input type="text" id="github" name="github" required placeholder="GitHub URL">
-              <label for="resume-url">Resume URL:</label>
-              <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
-              <label for="website-url">Website URL:</label>
-              <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
-              <label for="gmail">Gmail:</label>
-              <input type="email" id="gmail" name="gmail" required placeholder="Email">
-              <button type="submit">Submit</button>
-            </div>
-            <div id="company-form" class="form-group" style="display: none;">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required placeholder="Name">
-              <label for=" location">Location:</label>
-              <input type="text" id="location" name="location" required placeholder="Location">
-              <label for="facebook">Facebook:</label>
-              <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
-              <label for="website-url">Website URL:</label>
-              <input type="text" id="website-url" name="website-url" required placeholder="Website URL ">
-              <label for="gmail">Gmail:</label>
-              <input type="email" id="gmail" name="gmail" required placeholder="Email">
-              <button type="submit">Submit</button>
-            </div>
-            <div id="special-form" class="form-group" style="display: none;">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required placeholder="Name">
-              <label for="location">Location:</label>
-              <input type="text" id="location" name="location" required placeholder="Location">
-              <label for="facebook">Facebook:</label>
-              <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
-              <label for="website-url">Website URL:</label>
-              <input type="text" id="website-url" name="website-url" required placeholder="Website URL">
-              <label for="video-url">Video URL:</label>
-              <input type="text" id="video-url" name="video-url" required placeholder="Video URL">
-              <label for="gmail">Gmail:</label>
-              <input type="email" id="gmail" name="gmail" required placeholder="Email">
-              <button type="submit">Submit</button>
-            </div>
+            </form>
+
+            <!-- Company Card Form  -->
+
+            <form id="my-form" action="./Backend/company.php" method="post">
+              <div id="company-form" class="form-group" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Name">
+                <label for=" location">Location:</label>
+                <input type="text" id="location" name="location" required placeholder="Location">
+                <label for="facebook">Facebook:</label>
+                <input type="text" id="facebook" name="facebook" required placeholder="Facebook">
+                <label for="website-url">Website URL:</label>
+                <input type="text" id="website-url" name="website-url" required placeholder="Website URL ">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Email">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+
+
+            <form id="my-form" action="./Backend/student.php" method="post">
+              <div id="student-form" class="form-group" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Name">
+                <div class="upload">
+                  <button type="button" class="btn-warning">
+                    <i class="fa fa-upload"></i> Upload Photo
+                    <input type="file">
+                  </button>
+                </div>
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="text" id="linkedin" name="linkedin" required placeholder="LinkedIn URL ">
+                <label for="github">GitHub:</label>
+                <input type="text" id="github" name="github" required placeholder="GitHub URL ">
+                <label for="resume-url">Resume URL:</label>
+                <input type="text" id="resume-url" name="resume-url" required placeholder="Resume URL">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Email">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <!-- End Button form -->
           </div>
-        </form>
       </div>
-      <!-- End Button form -->
-    </div>
-  </div>
 
-  <!-- Secript JS -->
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#student-button").click(function () {
-        $(".form-group").hide();
-        $("#student-form").show();
-      });
 
-      $("#freelancer-button").click(function () {
-        $(".form-group").hide();
-        $("#freelancer-form").show();
-      });
+      <!-- Secript JS -->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $("#student-button").click(function () {
+            $(".form-group").hide();
+            $("#student-form").show();
+          });
 
-      $("#company-button").click(function () {
-        $(".form-group").hide();
-        $("#company-form").show();
-      });
+          $("#freelancer-button").click(function () {
+            $(".form-group").hide();
+            $("#freelancer-form").show();
+          });
 
-      $("#special-button").click(function () {
-        $(".form-group").hide();
-        $("#special-form").show();
-      });
-    });
-  </script>
+          $("#company-button").click(function () {
+            $(".form-group").hide();
+            $("#company-form").show();
+          });
+
+          $("#special-button").click(function () {
+            $(".form-group").hide();
+            $("#special-form").show();
+          });
+        });
+      </script>
 </body>
 
 </html>
