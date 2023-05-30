@@ -47,10 +47,13 @@ img {
   display: grid;
   align-content: center;
   justify-content: left;
-  background-color: #f8f6f4;
-  padding-left: 160px;
+  background-color: #f7f1fe;
+  padding-left: 30px;
+  padding-right: 90px;
   display: flex;
   align-items: center;
+  line-height: 30px;
+  font-size: 17px;
 }
 
 .gallery__card {
@@ -202,6 +205,11 @@ img {
 
 div.gallery-title h2 {
   margin: 20px;
+  font-size: 40px;
+  line-height: 42px;
+  font-weight: 500;
+  margin-bottom: 100px;
+  margin-top: -50px;
 }
 
 /*=============== BREAKPOINTS ===============*/
