@@ -337,6 +337,14 @@ ul {
   .landing .text h1 {
     font-size: 28px;
   }
+
+  .gif .heading-2 {
+    font-size: 28px;
+    margin-bottom: 0px;
+    line-height: 32px;
+    padding-bottom: 20px;
+    font-weight: 550;
+  }
 }
 
 .landing .text p {
