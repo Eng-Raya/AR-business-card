@@ -846,12 +846,18 @@ footer p {
   input::placeholder {
     visibility: visible;
   }
+
+  .ifvideo {
+    display: block;
+    margin: 20px auto;
+  }
 }
 
 @media (min-width: 768px) {
   input::placeholder {
     visibility: hidden;
   }
+
 }
 
 .btn-warning {
@@ -907,4 +913,14 @@ footer p {
 
     display: none;
   }
+
+  video {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+video {
+  width: 300px;
 }

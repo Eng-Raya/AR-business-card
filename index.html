@@ -106,23 +106,22 @@
     </div>
   </div>
   <!-- End Landing -->
-  <!-- Start Download Section  -->
+  <!-- Start Download Section -->
   <div class="download" id="download">
     <div class="warapper">
       <div class="w-layout-grid video-grid">
-        <img
-          src="https://uploads-ssl.webflow.com/60633661a010fe54ba207252/6064514cb13a696ccd10a887_Compressed%20GIF.gif"
-          alt="" />
+        <div class="video-container">
+          <iframe class="ifvideo" width="300" height="500"
+            src="https://www.youtube.com/embed/ezHH39HtAR8?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+        </div>
         <div class="video-grid-content gif">
           <div class="text-caps">NEEDED APP TO VIEW YOUR AR CARD</div>
           <h2 class="heading-2">
-            Enhance Your Marketing Strategy with Augmented Reality Business
-            Cards!
+            Enhance Your Marketing Strategy with Augmented Reality Business Cards!
           </h2>
           <p class="text">
-            Order now and unlock the power of augmented reality with our
-            business cards. Simply download our mobile app, scan your card,
-            and immerse yourself in an unforgettable experience.
+            Order now and unlock the power of augmented reality with our business cards. Simply download our mobile app,
+            scan your card, and immerse yourself in an unforgettable experience.
           </p>
           <div class="btn">
             <a href="#" onclick="downloadApp()" class="download-btn">Download App <i class="fa fa-download"></i></a>
@@ -132,15 +131,46 @@
       <script>
         function downloadApp() {
           var downloadLink = document.createElement("a");
-          downloadLink.href =
-            "https://drive.google.com/uc?export=download&id=1M_7obx-GGuys4EtJzeciORx1h2lR7F3a";
+          downloadLink.href = "https://drive.google.com/uc?export=download&id=1M_7obx-GGuys4EtJzeciORx1h2lR7F3a";
           downloadLink.setAttribute("download", "App");
           downloadLink.click();
         }
+
+        function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        var video = document.getElementById("arVideo");
+        var playVideo = false;
+
+        function checkVideo() {
+          if (isElementInViewport(video)) {
+            if (!playVideo) {
+              video.play();
+              video.setAttribute("loop", true);
+              playVideo = true;
+            }
+          } else {
+            video.pause();
+            video.removeAttribute("loop");
+            playVideo = false;
+          }
+        }
+
+        window.addEventListener("scroll", checkVideo);
+        window.addEventListener("resize", checkVideo);
+        checkVideo();
       </script>
     </div>
   </div>
   <!-- End Download Section -->
+
   <!-- Start Features Section -->
   <div class="featuers" id="features">
     <div class="container">
@@ -310,8 +340,8 @@
       <!-- Start Button form -->
       <!-- popup -->
       <button id="popup-button" class="button-3 desktop">
-          Order Now <i class="fas fa-shopping-cart"></i>
-        </button>
+        Order Now <i class="fas fa-shopping-cart"></i>
+      </button>
       <div id="overlay"></div>
       <div id="form-box">
         <form id="my-form" style="display: none;">
